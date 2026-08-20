@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inteligencia Artificial - ¿Qué es la IA?</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0B0F19;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.2) 0%, transparent 40%), 
+    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.2) 0%, transparent 40%), 
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 25px 25px, 25px 25px;
+  color: #E2E8F0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  background-color: #000000;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 2px solid #06B6D4;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav a {
+  color: #06B6D4;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #8B5CF6;
+  text-shadow: 0 0 10px #8B5CF6;
+}
+.activo {
+  color: #8B5CF6;
+  border-bottom: 2px solid #8B5CF6;
+  padding-bottom: 5px;
+}
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+h1 {
+  color: #06B6D4;
+  text-shadow: 0 0 15px rgba(6,182,212,0.5);
+}
+.marco {
+  background-color: #121826;
+  border: 2px solid #06B6D4;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(6,182,212,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.marco:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+  border-color: #8B5CF6;
+}
+h2 {
+  color: #8B5CF6;
+  border-bottom: 1px solid #8B5CF6;
+  padding-bottom: 10px;
+}
+ul, ol {
+  line-height: 1.8;
+  font-size: 16px;
+}
+li span {
+  color: #06B6D4;
+  font-weight: bold;
+}
+.imagen-contenedor {
+  text-align: center;
+  margin: 15px 0;
+}
+.imagen-contenedor img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 2px solid #06B6D4;
+  box-shadow: 0 0 10px rgba(6,182,212,0.3);
+  transition: transform 0.3s ease;
+}
+.imagen-contenedor img:hover {
+  transform: scale(1.05);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #000000;
+}
+th, td {
+  border: 1px solid #8B5CF6;
+  padding: 12px;
+  text-align: center;
+}
+th {
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.contenido-estatico {
+  background-color: #000000;
+  border: 1px solid #06B6D4;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="activo">¿Qué es la IA?</a>
+<a href="estudio.html">IA en el Estudio</a>
+<a href="deepfakes.html">Fake News y Deepfakes</a>
+<a href="trabajo.html">Futuro del Trabajo</a>
+<a href="formulario.html">Formulario</a>
+</nav>
+<header>
+<h1>¿Qué es la IA y cómo funciona la IA generativa?</h1>
+<p>Guía descriptiva sobre los fundamentos de la inteligencia artificial moderna y los modelos generativos[cite: 9].</p>
+</header>
+<div class="marco">
+<h2>Definición Básica de Inteligencia Artificial[cite: 9]</h2>
+<p>La Inteligencia Artificial (IA) se refiere a sistemas informáticos diseñados para simular procesos cognitivos humanos, tales como el aprendizaje, el razonamiento, la percepción y la resolución de problemas[cite: 9].</p>
+<ul>
+<li><span>Aprendizaje Automático (Machine Learning):</span> Algoritmos que permiten a las máquinas aprender de los datos sin ser programadas explícitamente para cada tarea[cite: 9].</li>
+<li><span>Redes Neuronales:</span> Modelos matemáticos inspirados en el cerebro humano que procesan información compleja en capas interconectadas[cite: 9].</li>
+</ul>
+<div class="imagen-contenedor">
+<img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="Inteligencia Artificial y tecnología">
+</div>
+</div>
+<div class="marco">
+<h2>Funcionamiento de la IA Generativa[cite: 9]</h2>
+<p>A diferencia de la IA tradicional que solo clasifica o predice datos, la IA generativa tiene la capacidad de crear contenido totalmente nuevo[cite: 9]:</p>
+<ol>
+<li><strong>Entrenamiento masivo:</strong> El modelo analiza miles de millones de textos, imágenes o líneas de código para encontrar patrones estadísticos[cite: 9].</li>
+<li><strong>Generación de respuestas:</strong> A partir de una orden o prompt, predice y redacta la siguiente palabra o trazo más probable basándose en su entrenamiento[cite: 9].</li>
+<li><strong>Optimización:</strong> Ajusta sus salidas mediante retroalimentación para ofrecer resultados cada vez más precisos y naturales[cite: 9].</li>
+</ol>
+</div>
+<div class="marco">
+<h2>Ejemplos de Herramientas Generativas[cite: 9]</h2>
+<p>Existen diversas categorías de inteligencias artificiales orientadas a la creación de contenidos multimedia[cite: 9]:</p>
+<ul>
+<li><span>Modelos de Lenguaje (LLM):</span> Sistemas capaces de mantener conversaciones fluidas, resumir documentos y redactar ensayos[cite: 9].</li>
+<li><span>Generadores de Imágenes:</span> Herramientas que transforman descripciones de texto en ilustraciones fotorrealistas o pinturas artísticas[cite: 9].</li>
+<li><span>Síntesis de Audio y Video:</span> Programas capaces de clonar voces, componer melodías o generar secuencias visuales animadas[cite: 9].</li>
+</ul>
+<div class="contenido-estatico">
+<p style="color:#06B6D4;font-weight:bold;margin:0;">Nota conceptual[cite: 9]:</p>
+<p style="margin:5px 0 0 0;">La IA generativa no "piensa" ni comprende la realidad; calcula matemáticamente qué combinación de elementos tiene mayor probabilidad de satisfacer la solicitud del usuario[cite: 9].</p>
+</div>
+</div>
+<div class="marco">
+<h2>Cuadro Comparativo: IA Tradicional vs. IA Generativa[cite: 9]</h2>
+<p>Cuadro de análisis de las diferencias clave entre ambos enfoques tecnológicos[cite: 9]:</p>
+<table>
+<thead>
+<tr>
+<th>Característica[cite: 9]</th>
+<th>IA Tradicional (Clasificación/Predicción)[cite: 9]</th>
+<th>IA Generativa (Creación)[cite: 9]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objetivo Principal[cite: 9]</td>
+<td>Reconocer patrones y clasificar datos existentes[cite: 9]</td>
+<td>Crear contenido original y nuevo[cite: 9]</td>
+</tr>
+<tr>
+<td>Ejemplo de Uso[cite: 9]</td>
+<td>Detectar spam en correos o sugerir rutas GPS[cite: 9]</td>
+<td>Redactar textos, componer música o generar imágenes[cite: 9]</td>
+</tr>
+<tr>
+<td>Tipo de Salida[cite: 9]</td>
+<td>Etiquetas, valores numéricos o decisiones binarias[cite: 9]</td>
+<td>Textos completos, arte visual, código o audio[cite: 9]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

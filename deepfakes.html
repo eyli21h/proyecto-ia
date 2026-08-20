@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inteligencia Artificial - Fake News y Deepfakes</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0B0F19;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.2) 0%, transparent 40%), 
+    radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.2) 0%, transparent 40%), 
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 25px 25px, 25px 25px;
+  color: #E2E8F0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  background-color: #000000;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 2px solid #06B6D4;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav a {
+  color: #06B6D4;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #8B5CF6;
+  text-shadow: 0 0 10px #8B5CF6;
+}
+.activo {
+  color: #8B5CF6;
+  border-bottom: 2px solid #8B5CF6;
+  padding-bottom: 5px;
+}
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+h1 {
+  color: #06B6D4;
+  text-shadow: 0 0 15px rgba(6,182,212,0.5);
+}
+.marco {
+  background-color: #121826;
+  border: 2px solid #06B6D4;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(6,182,212,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.marco:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+  border-color: #8B5CF6;
+}
+h2 {
+  color: #8B5CF6;
+  border-bottom: 1px solid #8B5CF6;
+  padding-bottom: 10px;
+}
+ul, ol {
+  line-height: 1.8;
+  font-size: 16px;
+}
+li span {
+  color: #06B6D4;
+  font-weight: bold;
+}
+.imagen-contenedor {
+  text-align: center;
+  margin: 15px 0;
+}
+.imagen-contenedor img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 2px solid #06B6D4;
+  box-shadow: 0 0 10px rgba(6,182,212,0.3);
+  transition: transform 0.3s ease;
+}
+.imagen-contenedor img:hover {
+  transform: scale(1.05);
+}
+.pregunta-caja {
+  background-color: #000000;
+  border: 1px solid #8B5CF6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+.btn-opcion {
+  background-color: #121826;
+  color: #06B6D4;
+  border: 1px solid #06B6D4;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px 5px 5px 0;
+  transition: 0.3s;
+}
+.btn-opcion:hover {
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+  border-color: #8B5CF6;
+}
+.resultado {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.correcta {
+  color: #10B981;
+}
+.mala {
+  color: #EF4444;
+}
+.contenido-estatico {
+  background-color: #000000;
+  border: 1px solid #06B6D4;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">¿Qué es la IA?</a>
+<a href="estudio.html">IA en el Estudio</a>
+<a href="deepfakes.html" class="activo">Fake News y Deepfakes</a>
+<a href="trabajo.html">Futuro del Trabajo</a>
+<a href="formulario.html">Formulario</a>
+</nav>
+<header>
+<h1>Fake News y Deepfakes: El impacto de la manipulación digital</h1>
+<p>Análisis detallado sobre alteración multimedia, desinformación global y autoevaluación interactiva[cite: 5].</p>
+</header>
+<div class="marco">
+<h2>¿Qué son los Deepfakes y cómo operan?[cite: 5]</h2>
+<p>Un <span>deepfake</span> es un contenido audiovisual hiperrealista creado mediante inteligencia artificial que manipula o sustituye rostros, expresiones y voces humanas con absoluta precisión[cite: 5]:</p>
+<ul>
+<li><span>Redes Generativas Antagónicas (GANs):</span> Sistemas complejos donde dos modelos de IA compiten: uno crea falsificaciones y el otro evalúa su realismo hasta engañar por completo al espectador[cite: 5].</li>
+<li><span>Suplantación de Identidad y Fraude:</span> Riesgo latente enfocado en la estafa corporativa, extorsión digital y la difamación sistemática de figuras públicas y ciudadanos comunes[cite: 5].</li>
+</ul>
+<div class="imagen-contenedor">
+<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Seguridad digital y tecnología">
+</div>
+</div>
+<div class="marco">
+<h2>Proliferación Masiva de Fake News impulsada por IA[cite: 5]</h2>
+<p>Los modelos de lenguaje modernos facilitan la creación automatizada de noticias falsas a gran escala, alterando la percepción de la sociedad[cite: 5]:</p>
+<ol>
+<li><strong>Desinformación algorítmica:</strong> Generación masiva de artículos informativos falsos redactados con un tono formal y sumamente persuasivo para confundir a los lectores[cite: 5].</li>
+<li><strong>Viralización mediante Bots:</strong> Uso de perfiles automatizados en redes sociales para propagar titulares tendenciosos antes de que los equipos de verificación puedan actuar[cite: 5].</li>
+<li><strong>Erosión de la confianza pública:</strong> Generación de un clima de escepticismo generalizado donde la ciudadanía ya no distingue entre un hecho real y una invención artificial[cite: 5].</li>
+</ol>
+<div class="imagen-contenedor">
+<img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="Noticias y medios digitales">
+</div>
+</div>
+<div class="marco">
+<h2>Autoevaluación Interactiva: Pon a prueba tu criterio[cite: 5]</h2>
+<p>Haz clic en una opción para comprobar si la conducta descrita representa una respuesta correcta o una mala práctica frente a la desinformación[cite: 5]:</p>
+
+<div class="pregunta-caja">
+<p><strong>Pregunta 1:</strong> Compartir de inmediato en tus redes sociales una noticia impactante y alarmante sin verificar la fuente ni contrastarla con medios oficiales[cite: 5].</p>
+<button class="btn-opcion" onclick="verificar(1, 'correcta')">Es una buena acción</button>
+<button class="btn-opcion" onclick="verificar(1, 'mala')">Es una mala acción</button>
+<div id="res-1" class="resultado"></div>
+</div>
+
+<div class="pregunta-caja">
+<p><strong>Pregunta 2:</strong> Revisar inconsistencias visuales en un video, buscar portales de fact-checking y verificar el origen antes de dar por buena una información dudosa[cite: 5].</p>
+<button class="btn-opcion" onclick="verificar(2, 'correcta')">Es una buena acción</button>
+<button class="btn-opcion" onclick="verificar(2, 'mala')">Es una mala acción</button>
+<div id="res-2" class="resultado"></div>
+</div>
+</div>
+
+<div class="marco">
+<h2>Estrategias Avanzadas de Detección y Prevención[cite: 5]</h2>
+<p>Para hacer frente a los efectos nocivos de la manipulación digital y proteger la veracidad de la información, es indispensable aplicar filtros críticos[cite: 5]:</p>
+<ul>
+<li><span>Análisis minucioso de detalles visuales:</span> Examinar fallos sutiles en la iluminación, falta de sincronización en los labios, parpadeos extraños o sombras irregulares alrededor de la cara[cite: 5].</li>
+<li><span>Contraste riguroso con fuentes oficiales:</span> Comprobar si los portales de noticias legítimos o agencias internacionales de verificación respaldan el acontecimiento[cite: 5].</li>
+</ul>
+<div class="contenido-estatico">
+<p style="color:#06B6D4;font-weight:bold;margin:0;">Advertencia crítica[cite: 5]:</p>
+<p style="margin:5px 0 0 0;">No todo lo que se observa o se reproduce en las redes sociales es auténtico; cultivar un pensamiento analítico y verificar las fuentes informativas es la mejor barrera contra la manipulación tecnológica[cite: 5].</p>
+</div>
+</div>
+
+<script>
+function verificar(pregunta, opcion) {
+  let contenedor = document.getElementById("res-" + pregunta);
+  if (pregunta === 1) {
+    if (opcion === 'mala') {
+      contenedor.innerHTML = "<span class='correcta'>¡Respuesta correcta!</span> Compartir sin verificar propaga activamente las fake news.";
+    } else {
+      contenedor.innerHTML = "<span class='mala'>Respuesta mala (Incorrecta)</span>. Compartir información sin chequear fomenta la desinformación colectiva.";
+    }
+  } else if (pregunta === 2) {
+    if (opcion === 'correcta') {
+      contenedor.innerHTML = "<span class='correcta'>¡Respuesta correcta!</span> Analizar y contrastar fuentes es la actitud más responsable.";
+    } else {
+      contenedor.innerHTML = "<span class='mala'>Respuesta mala (Incorrecta)</span>. Verificar el origen de los datos nunca es una mala acción.";
+    }
+  }
+}
+</script>
+</body>
+</html>

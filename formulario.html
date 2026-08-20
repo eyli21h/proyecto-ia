@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inteligencia Artificial - Formulario</title>
+<style>
+html, body {
+margin:0;
+padding:0;
+width:100%;
+min-height:100vh;
+background-color:#0B0F19;
+background-image:
+  radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.2) 0%, transparent 40%),
+  radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.2) 0%, transparent 40%),
+  linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+background-size:100% 100%, 100% 100%, 25px 25px, 25px 25px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Georgia, serif;
+position:relative;
+overflow:hidden;
+box-sizing:border-box;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 2px solid #06B6D4;
+  z-index: 100;
+}
+nav a {
+  color: #06B6D4;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav a:hover {
+  color: #8B5CF6;
+  text-shadow: 0 0 10px #8B5CF6;
+}
+.activo {
+  color: #8B5CF6;
+  border-bottom: 2px solid #8B5CF6;
+  padding-bottom: 5px;
+}
+.contenedor-tech{
+position:relative;
+width:90%;
+max-width:520px;
+z-index:2;
+padding:15px;
+margin-top: 60px;
+}
+.marco-svg{
+position:absolute;
+pointer-events:none;
+z-index:3;
+}
+.corner-tl{ top:0; left:0; }
+.corner-tr{ top:0; right:0; transform:scaleX(-1); }
+.corner-bl{ bottom:0; left:0; transform:scaleY(-1); }
+.corner-br{ bottom:0; right:0; transform:scale(-1); }
+
+.header-ia{
+text-align:center;
+margin-bottom:20px;
+}
+.titulo-ia{
+color:#06B6D4;
+font-family:monospace;
+font-size:22px;
+letter-spacing:1px;
+text-shadow:0 0 12px rgba(6, 182, 212, 0.8);
+margin:0 0 6px 0;
+}
+.subtitulo-ia{
+color:#E2E8F0;
+font-size:15px;
+margin:0;
+opacity:0.85;
+}
+.formulario{
+position:relative;
+width:100%;
+background-color:#000000;
+padding:30px;
+border-radius:12px;
+border:2px solid #06B6D4;
+box-sizing:border-box;
+box-shadow:0 0 25px rgba(6, 182, 212, 0.25);
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.formulario:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px rgba(139, 92, 246, 0.45);
+}
+.formulario label{
+display:block;
+margin-top:15px;
+color:#8B5CF6;
+font-weight:bold;
+}
+.formulario label:first-of-type{
+margin-top:0;
+}
+.formulario input,
+.formulario textarea{
+width:100%;
+padding:12px;
+border:2px solid #06B6D4;
+border-radius:12px;
+margin-top:5px;
+font-size:16px;
+font-family:Georgia, serif;
+box-sizing:border-box;
+background-color:#121826;
+color:#E2E8F0;
+outline:none;
+}
+.formulario input:focus,
+.formulario textarea:focus{
+border-color:#8B5CF6;
+box-shadow:0 0 10px #8B5CF6;
+}
+.formulario textarea{
+height:120px;
+}
+.formulario button{
+width:100%;
+margin-top:20px;
+background-color:#06B6D4;
+color:#0B0F19;
+border:none;
+padding:12px 20px;
+border-radius:12px;
+font-size:18px;
+cursor:pointer;
+font-family:Georgia, serif;
+font-weight:bold;
+transition:all 0.3s ease;
+}
+.formulario button:hover{
+background-color:#8B5CF6;
+color:#FFFFFF;
+transform:translateY(-3px);
+box-shadow:0 0 12px #8B5CF6;
+}
+.dibujo-ia{
+position:absolute;
+pointer-events:none;
+z-index:1;
+opacity:0.35;
+filter:drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));
+}
+.dibujo-1{ top:8%; left:3%; }
+.dibujo-2{ bottom:8%; left:3%; }
+.dibujo-3{ top:8%; right:3%; }
+.dibujo-4{ bottom:8%; right:3%; }
+
+#resultado-envio {
+margin-top: 15px;
+text-align: center;
+font-family: monospace;
+font-size: 15px;
+display: none;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="index.html">¿Qué es la IA?</a>
+<a href="estudio.html">IA en el Estudio</a>
+<a href="deepfakes.html">Fake News y Deepfakes</a>
+<a href="trabajo.html">Futuro del Trabajo</a>
+<a href="formulario.html" class="activo">Formulario</a>
+</nav>
+
+<!-- Dibujos vectoriales de IA afuera del formulario -->
+<svg class="dibujo-ia dibujo-1" width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.5">
+  <rect x="4" y="4" width="16" height="16" rx="2"/>
+  <rect x="9" y="9" width="6" height="6"/>
+  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+</svg>
+
+<svg class="dibujo-ia dibujo-2" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5">
+  <circle cx="12" cy="12" r="3"/>
+  <circle cx="4" cy="6" r="2"/>
+  <circle cx="20" cy="6" r="2"/>
+  <circle cx="4" cy="18" r="2"/>
+  <circle cx="20" cy="18" r="2"/>
+  <line x1="6" y1="7" x2="10" y2="10"/>
+  <line x1="18" y1="7" x2="14" y2="10"/>
+  <line x1="6" y1="17" x2="10" y2="14"/>
+  <line x1="18" y1="17" x2="14" y2="14"/>
+</svg>
+
+<svg class="dibujo-ia dibujo-3" width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5">
+  <circle cx="12" cy="12" r="10"/>
+  <line x1="2" y1="12" x2="22" y2="12"/>
+  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+</svg>
+
+<svg class="dibujo-ia dibujo-4" width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.5">
+  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+</svg>
+
+<div class="contenedor-tech">
+  <!-- Bordes estilizados de circuitos en las esquinas -->
+  <svg class="marco-svg corner-tl" width="35" height="35" viewBox="0 0 40 40" fill="none" stroke="#06B6D4" stroke-width="3">
+    <path d="M0 10 L0 0 L10 0 M0 20 L20 0 M0 35 L35 0"/>
+  </svg>
+  <svg class="marco-svg corner-tr" width="35" height="35" viewBox="0 0 40 40" fill="none" stroke="#06B6D4" stroke-width="3">
+    <path d="M0 10 L0 0 L10 0 M0 20 L20 0 M0 35 L35 0"/>
+  </svg>
+  <svg class="marco-svg corner-bl" width="35" height="35" viewBox="0 0 40 40" fill="none" stroke="#06B6D4" stroke-width="3">
+    <path d="M0 10 L0 0 L10 0 M0 20 L20 0 M0 35 L35 0"/>
+  </svg>
+  <svg class="marco-svg corner-br" width="35" height="35" viewBox="0 0 40 40" fill="none" stroke="#06B6D4" stroke-width="3">
+    <path d="M0 10 L0 0 L10 0 M0 20 L20 0 M0 35 L35 0"/>
+  </svg>
+
+  <div class="header-ia">
+    <h2 class="titulo-ia">&lt; IA EN EL MUNDO ACTUAL /&gt;</h2>
+    <p class="subtitulo-ia">Comparta su perspectiva sobre el impacto de la Inteligencia Artificial en la sociedad actual.</p>
+  </div>
+
+  <form class="formulario" id="miFormulario" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Configuración Web3Forms -->
+    <input type="hidden" name="access_key" value="48e3be0d-e7b0-41f0-9c9d-de6ebfc32387">
+    <input type="hidden" name="subject" value="Nueva opinión sobre IA recibida">
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Campos del Formulario -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="mensaje">Su opinión sobre la IA hoy en día:</label>
+    <textarea id="mensaje" name="mensaje" required></textarea>
+
+    <button type="submit" id="btnEnviar">Enviar Opinión</button>
+    
+    <!-- Mensaje de estado al enviar -->
+    <div id="resultado-envio"></div>
+  </form>
+</div>
+
+<!-- JavaScript para envío dinámico (AJAX) sin recargar la página -->
+<script>
+  const form = document.getElementById('miFormulario');
+  const resultado = document.getElementById('resultado-envio');
+  const btnEnviar = document.getElementById('btnEnviar');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    btnEnviar.textContent = 'Enviando...';
+    btnEnviar.disabled = true;
+    resultado.style.display = 'block';
+    resultado.style.color = '#06B6D4';
+    resultado.textContent = 'Procesando envío...';
+
+    const formData = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        resultado.style.color = '#10B981'; // Verde de éxito
+        resultado.textContent = '¡Gracias! Su opinión ha sido enviada con éxito.';
+        form.reset();
+      } else {
+        resultado.style.color = '#EF4444'; // Rojo de error
+        resultado.textContent = json.message || 'Ocurrió un error al enviar.';
+      }
+    })
+    .catch(error => {
+      resultado.style.color = '#EF4444';
+      resultado.textContent = 'Error de conexión. Intente de nuevo.';
+    })
+    .then(() => {
+      btnEnviar.textContent = 'Enviar Opinión';
+      btnEnviar.disabled = false;
+      setTimeout(() => {
+        resultado.style.display = 'none';
+      }, 5000);
+    });
+  });
+</script>
+</body>
+</html>
